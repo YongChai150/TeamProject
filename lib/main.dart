@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:team_project/firstSplash.dart';
+import 'package:team_project/login/firstSplash.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +14,7 @@ class _MyAppState extends State<MyApp> {
     return new MaterialApp(
       title: "Aepad",
       debugShowCheckedModeBanner: false,
-      home: new firstSplash(),
+      home: firstSplash(),
     );
   }
 }

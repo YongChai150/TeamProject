@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:team_project/home/home.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -7,10 +8,12 @@ class Login extends StatefulWidget {
 }
 
 class _LoginPageState extends State<Login> {
+  //variable to fetch username and password
   final _formKey = new GlobalKey<FormState>();
   String _username;
   String _password;
 
+  //save it and return true if the form is valid
   bool validateAndSave() {
     final form = _formKey.currentState;
     if (form.validate()) {
@@ -21,8 +24,14 @@ class _LoginPageState extends State<Login> {
     }
   }
 
+  //save and redirect, if the username and password is correct
   void validateAndSubmit() {
     if (validateAndSave()) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => new Home(),
+          ));
     } else {}
   }
 

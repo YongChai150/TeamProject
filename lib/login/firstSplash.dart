@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:team_project/login.dart';
+import 'package:team_project/login/login.dart';
 import 'dart:async';
 
 class firstSplash extends StatefulWidget {
@@ -10,7 +10,7 @@ class firstSplash extends StatefulWidget {
 class _firstSplashState extends State<firstSplash> {
   @override
   void initState() {
-    super.initState();
+    //super.initState();
     Future.delayed(
       Duration(seconds: 5),
       () => Navigator.push(
